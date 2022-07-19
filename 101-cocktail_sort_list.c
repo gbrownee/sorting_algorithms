@@ -75,16 +75,16 @@ void cocktail_sort_list(listint_t **list)
 			break;
 		p = p->prev;
 		while (p->prev)
+		{
+			if (p->n < p->prev->n)
 			{
-				if (p->n < p->prev->n)
-				{
-					sorted = 0;
-					p = p->prev;
-					switch_nodes(list, &p);
-					print_list(*list);
-				}
-				else
-					p = p->prev;
+				sorted = 0;
+				p = p->prev;
+				switch_nodes(list, &p);
+				print_list(*list);
 			}
+			else
+				p = p->prev;
+		}
 	}
 }

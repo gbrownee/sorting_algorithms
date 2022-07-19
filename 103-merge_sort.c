@@ -56,7 +56,7 @@ void merge_subarray(int *arr, int *array, size_t left,
 	print_array(array + left, middle  - left);
 	printf("[right]: ");
 	print_array(array + middle, right - middle);
-	
+
 	for (i = left, j = middle; i < middle && j < right; k++)
 	{
 		if (array[i] < array[j])

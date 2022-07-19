@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 
 	if (!list || !(*list) || len_list(*list) < 2)
 		return;
-	
+
 	curr = *list;
 
 	while (curr)

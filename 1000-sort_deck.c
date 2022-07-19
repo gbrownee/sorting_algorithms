@@ -52,7 +52,7 @@ void sort_deck(deck_node_t **deck)
 int card_value(deck_node_t *node)
 {
 	char *val[13] = {"Ace", "2", "3", "4", "5", "6",
-		         "7", "8", "9", "10", "Jack", "Queen", "King"};
+		"7", "8", "9", "10", "Jack", "Queen", "King"};
 	char *kinds[4] = {"SPADE", "HEART", "CLUB", "DIAMOND"};
 	int i, kind_val = 0;
 
@@ -67,7 +67,7 @@ int card_value(deck_node_t *node)
 		if (!_strcmp(kinds[node->card->kind], kinds[i - 1]))
 			kind_val = kind_val + (13 * i);
 	}
-	
+
 	return (kind_val);
 }
 
